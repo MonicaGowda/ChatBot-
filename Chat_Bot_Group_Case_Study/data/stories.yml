@@ -1,0 +1,1042 @@
+version: "2.0"
+stories:
+
+- story: interactive_story_13
+  steps:
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+    - location: mumbai
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - location: mumbai
+  - action: action_check_location_valid
+  - slot_was_set:
+    - location_validity: valid
+  - slot_was_set:
+    - location: mumbai
+  - action: action_check_cuisine_valid
+  - slot_was_set:
+    - cuisine_validity: valid
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_budget
+  - intent: ask_budget
+    entities:
+    - budget: '700'
+  - slot_was_set:
+    - budget: '700'
+  - action: action_search_restaurants
+  - slot_was_set:
+    - emailbody: Sorry! less than 5 restaurnts found
+  - action: utter_ask_further_search_of_restaurants
+  - intent: deny
+  - action: utter_aknowledge_denial
+  - action: utter_goodbye
+  - action: action_restarted
+
+- story: interactive_story_14
+  steps:
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+    - location: mumbai
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - location: mumbai
+  - action: action_check_location_valid
+  - slot_was_set:
+    - location_validity: valid
+  - slot_was_set:
+    - location: mumbai
+  - action: action_check_cuisine_valid
+  - slot_was_set:
+    - cuisine_validity: valid
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_budget
+  - intent: ask_budget
+    entities:
+    - budget: '701'
+  - slot_was_set:
+    - budget: '701'
+  - action: action_search_restaurants
+  - slot_was_set:
+    - emailbody: "Found 1 high The Fusion Kitchen in Shop 1, Opposite Veda Building, Near Bhavdevi Garage, Holy Cross Road, IC colony, Borivali West, Mumbai rated 4.7 with avg cost 1000 \n\nFound 2 high Yauatcha in Raheja Tower, Bandra Kurla Complex, Mumbai rated 4.6 with avg cost 2800 \n\nFound 3 high Butterfly High in Unit 4, Ground Floor, Jet Airways, Godrej G Block, Near MCA, Bandra Kurla Complex, Mumbai rated 4.3 with avg cost 1500 \n\nFound 4 high BKC  DIVE in Ground Floor, Pinnacle Corporate Park, Opposite MTNL Office, Bandra Kurla Complex, Mumbai rated 4.2 with avg cost 1100 \n\nFound 5 high Bayview Cafe in Hotel Harbour View, Kerawala Chamber, Opposite Radio Club, 25, J P Ramchandani Marg, Colaba, Mumbai rated 4.2 with avg cost 1200 \n\nFound 6 high Tea Villa Cafe in 31, Opposite Globus, Hill Road, Bandra West rated 4.1 with avg cost 1000 \n\n"
+  - action: utter_ask_send_email
+  - intent: affirm
+  - action: utter_ask_for_email_address
+  - intent: ask_for_email_address
+    entities:
+    - email: njalgaonkar@gmail.com
+  - slot_was_set:
+    - email: njalgaonkar@gmail.com
+  - action: action_check_email_valid
+  - slot_was_set:
+    - email_validity: valid
+    - email: njalgaonkar@gmail.com
+  - action: action_send_mail
+  - action: utter_ask_further_search_of_restaurants
+  - intent: affirm
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+    - location: mumbai
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - location: mumbai
+  - action: action_check_location_valid
+  - slot_was_set:
+    - location_validity: valid
+  - slot_was_set:
+    - location: mumbai
+  - action: action_check_cuisine_valid
+  - slot_was_set:
+    - cuisine_validity: valid
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_budget
+  - intent: ask_budget
+    entities:
+    - budget: '700'
+  - slot_was_set:
+    - budget: '700'
+  - action: action_search_restaurants
+  - slot_was_set:
+    - emailbody: Sorry! less than 5 restaurnts found
+  - action: utter_ask_further_search_of_restaurants
+  - intent: affirm
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+    - location: mumbai
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - location: mumbai
+  - action: action_check_location_valid
+  - slot_was_set:
+    - location_validity: valid
+  - slot_was_set:
+    - location: mumbai
+  - action: action_check_cuisine_valid
+  - slot_was_set:
+    - cuisine_validity: valid
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_budget
+  - intent: ask_budget
+    entities:
+    - budget: '299'
+  - slot_was_set:
+    - budget: '299'
+  - action: action_search_restaurants
+  - slot_was_set:
+    - emailbody: Sorry! less than 5 restaurnts found
+  - action: utter_ask_further_search_of_restaurants
+  - intent: deny
+  - action: utter_aknowledge_denial
+  - action: utter_goodbye
+  - action: action_restarted
+
+- story: interactive_story_15
+  steps:
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+    - location: mumbai
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - location: mumbai
+  - action: action_check_location_valid
+  - slot_was_set:
+    - location_validity: valid
+  - slot_was_set:
+    - location: mumbai
+  - action: action_check_cuisine_valid
+  - slot_was_set:
+    - cuisine_validity: valid
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_budget
+  - intent: ask_budget
+    entities:
+    - budget: '701'
+  - slot_was_set:
+    - budget: '701'
+  - action: action_search_restaurants
+  - slot_was_set:
+    - emailbody: "Found 1 high The Fusion Kitchen in Shop 1, Opposite Veda Building, Near Bhavdevi Garage, Holy Cross Road, IC colony, Borivali West, Mumbai rated 4.7 with avg cost 1000 \n\nFound 2 high Yauatcha in Raheja Tower, Bandra Kurla Complex, Mumbai rated 4.6 with avg cost 2800 \n\nFound 3 high Butterfly High in Unit 4, Ground Floor, Jet Airways, Godrej G Block, Near MCA, Bandra Kurla Complex, Mumbai rated 4.3 with avg cost 1500 \n\nFound 4 high BKC  DIVE in Ground Floor, Pinnacle Corporate Park, Opposite MTNL Office, Bandra Kurla Complex, Mumbai rated 4.2 with avg cost 1100 \n\nFound 5 high Bayview Cafe in Hotel Harbour View, Kerawala Chamber, Opposite Radio Club, 25, J P Ramchandani Marg, Colaba, Mumbai rated 4.2 with avg cost 1200 \n\nFound 6 high Tea Villa Cafe in 31, Opposite Globus, Hill Road, Bandra West rated 4.1 with avg cost 1000 \n\n"
+  - action: utter_ask_send_email
+  - intent: deny
+  - action: utter_aknowledge_denial
+  - action: utter_ask_further_search_of_restaurants
+  - intent: restaurant_search
+    entities:
+    - location: mumbai
+  - slot_was_set:
+    - location: mumbai
+  - action: action_check_location_valid
+  - slot_was_set:
+    - location_validity: valid
+  - slot_was_set:
+    - location: mumbai
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: Italian
+  - slot_was_set:
+    - cuisine: Italian
+  - action: action_check_cuisine_valid
+  - slot_was_set:
+    - cuisine_validity: valid
+  - slot_was_set:
+    - cuisine: Italian
+  - action: utter_ask_budget
+  - intent: ask_budget
+    entities:
+    - budget: '701'
+  - slot_was_set:
+    - budget: '701'
+  - action: action_search_restaurants
+  - slot_was_set:
+    - emailbody: "Found 1 high The Fusion Kitchen in Shop 1, Opposite Veda Building, Near Bhavdevi Garage, Holy Cross Road, IC colony, Borivali West, Mumbai rated 4.7 with avg cost 1000 \n\nFound 2 high Aer - Four Seasons in 1/136, E Moses Road, Worli, Mumbai rated 4.6 with avg cost 4500 \n\nFound 3 high Sin City Rooftop Resto & Lounge in 5th Floor, Crystal Point Mall, Andheri Lokhandwala, Andheri West, Mumbai rated 4.6 with avg cost 2500 \n\nFound 4 high JLWA in Unit 1-5, B 40, Patel Commercial Premises, Opposite Citi Mall, Veera Desai Area, Mumbai rated 4.4 with avg cost 2100 \n\nFound 5 high Raasta in 4th & 5th Floor, Rohan Plaza, 5th Road, Near Union Bank, Khar, Mumbai rated 4.3 with avg cost 1500 \n\nFound 6 high Tea Villa Cafe in 31, Opposite Globus, Hill Road, Bandra West rated 4.1 with avg cost 1000 \n\n"
+  - action: utter_ask_send_email
+  - intent: deny
+  - action: utter_ask_further_search_of_restaurants
+  - intent: deny
+  - action: utter_aknowledge_denial
+  - action: utter_goodbye
+  - action: action_restarted
+
+
+- story: interactive_story_16
+  steps:
+  - intent: restaurant_search
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: mumbaim
+  - slot_was_set:
+    - location: mumbaim
+  - action: action_check_location_valid
+  - slot_was_set:
+    - location_validity: invalid
+  - slot_was_set:
+    - location: None
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: mumbai
+  - slot_was_set:
+    - location: mumbai
+  - action: action_check_location_valid
+  - slot_was_set:
+    - location_validity: valid
+  - slot_was_set:
+    - location: mumbai
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - action: action_check_cuisine_valid
+  - slot_was_set:
+    - cuisine_validity: valid
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_budget
+  - intent: ask_budget
+    entities:
+    - budget: '701'
+  - slot_was_set:
+    - budget: '701'
+  - action: action_search_restaurants
+  - slot_was_set:
+    - emailbody: "Found 1 high The Fusion Kitchen in Shop 1, Opposite Veda Building, Near Bhavdevi Garage, Holy Cross Road, IC colony, Borivali West, Mumbai rated 4.7 with avg cost 1000 \n\nFound 2 high Yauatcha in Raheja Tower, Bandra Kurla Complex, Mumbai rated 4.6 with avg cost 2800 \n\nFound 3 high Butterfly High in Unit 4, Ground Floor, Jet Airways, Godrej G Block, Near MCA, Bandra Kurla Complex, Mumbai rated 4.3 with avg cost 1500 \n\nFound 4 high BKC  DIVE in Ground Floor, Pinnacle Corporate Park, Opposite MTNL Office, Bandra Kurla Complex, Mumbai rated 4.2 with avg cost 1100 \n\nFound 5 high Bayview Cafe in Hotel Harbour View, Kerawala Chamber, Opposite Radio Club, 25, J P Ramchandani Marg, Colaba, Mumbai rated 4.2 with avg cost 1200 \n\nFound 6 high Tea Villa Cafe in 31, Opposite Globus, Hill Road, Bandra West rated 4.1 with avg cost 1000 \n\n"
+  - action: utter_ask_send_email
+  - intent: affirm
+  - action: utter_ask_for_email_address
+  - intent: ask_for_email_address
+    entities:
+    - email: manishvidya@gmail.com
+  - slot_was_set:
+    - email: manishvidya@gmail.com
+  - action: action_check_email_valid
+  - slot_was_set:
+    - email_validity: valid
+    - email: manishvidya@gmail.com
+  - action: action_send_mail
+  - action: utter_ask_further_search_of_restaurants
+  - intent: deny
+  - action: utter_aknowledge_denial
+  - action: utter_goodbye
+  - action: action_restarted
+
+- story: interactive_story_21
+  steps:
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+    - location: surat
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - location: surat
+  - action: action_check_location_valid
+  - slot_was_set:
+    - location_validity: valid
+  - slot_was_set:
+    - location: surat
+  - action: action_check_cuisine_valid
+  - slot_was_set:
+    - cuisine_validity: valid
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_budget
+  - intent: ask_budget
+    entities:
+    - budget: '299'
+  - slot_was_set:
+    - budget: '299'
+  - action: action_search_restaurants
+  - slot_was_set:
+    - emailbody: Sorry! We don't have matching restaurants for surat location and chinese Cusine.
+  - action: utter_ask_further_search_of_restaurants
+  - intent: affirm
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: ahmedabad
+  - slot_was_set:
+    - location: ahmedabad
+  - action: action_check_location_valid
+  - slot_was_set:
+    - location_validity: valid
+  - slot_was_set:
+    - location: ahmedabad
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - action: action_check_cuisine_valid
+  - slot_was_set:
+    - cuisine_validity: valid
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_budget
+  - intent: ask_budget
+    entities:
+    - budget: '299'
+  - slot_was_set:
+    - budget: '299'
+  - action: action_search_restaurants
+  - slot_was_set:
+    - emailbody: Sorry! We don't have matching restaurants for ahmedabad location and chinese Cusine.
+  - action: utter_ask_further_search_of_restaurants
+  - intent: affirm
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bhopal
+  - slot_was_set:
+    - location: bhopal
+  - action: action_check_location_valid
+  - slot_was_set:
+    - location_validity: valid
+  - slot_was_set:
+    - location: bhopal
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - action: action_check_cuisine_valid
+  - slot_was_set:
+    - cuisine_validity: valid
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_budget
+  - intent: ask_budget
+    entities:
+    - budget: '299'
+  - slot_was_set:
+    - budget: '299'
+  - action: action_search_restaurants
+  - slot_was_set:
+    - emailbody: "1:Bake N Shake in B-1, GM Tower,  Stop No. 10, Arera Colony, Bhopal has been rated 4.4 \n\n2:Black N White Cafe in G-1, Raksha Tower, Eden Garden, Arera Colony, Bhopal has been rated 3.3 \n\nSorry! We don't have matching restaurants for bhopal location and chinese Cusine."
+  - action: utter_ask_send_email
+  - intent: deny
+  - action: utter_ask_further_search_of_restaurants
+  - intent: deny
+  - action: utter_aknowledge_denial
+  - action: utter_goodbye
+  - action: action_restarted
+
+- story: interactive_story_22
+  steps:
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+    - location: surat
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - location: surat
+  - action: action_check_location_valid
+  - slot_was_set:
+    - location_validity: valid
+  - slot_was_set:
+    - location: surat
+  - action: action_check_cuisine_valid
+  - slot_was_set:
+    - cuisine_validity: valid
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_budget
+  - intent: ask_budget
+    entities:
+    - budget: '299'
+  - slot_was_set:
+    - budget: '299'
+  - action: action_search_restaurants
+  - slot_was_set:
+    - emailbody: Sorry, No results found for your criteria
+  - action: utter_ask_further_search_of_restaurants
+  - intent: affirm
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: Ahmedabad
+  - slot_was_set:
+    - location: Ahmedabad
+  - action: action_check_location_valid
+  - slot_was_set:
+    - location_validity: valid
+  - slot_was_set:
+    - location: ahmedabad
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - action: action_check_cuisine_valid
+  - slot_was_set:
+    - cuisine_validity: valid
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_budget
+  - intent: ask_budget
+    entities:
+    - budget: '701'
+  - slot_was_set:
+    - budget: '701'
+  - action: action_search_restaurants
+  - slot_was_set:
+    - emailbody: "1:Lollo Rosso in Shop 2, Ground Floor, Aeon Complex, Opposite Navkar Institute, Navrangpura, Ahmedabad has been rated 4.6  \n\n2:Brick Kitchen in At Five Petals Hotel & Banquets, Near Chanakyapuri Bridge, Ghatlodia, Ahmedabad has been rated 4.3  \n\n3:650 - The Global Kitchen in Shreekunj Mandapam, Beside Golden Tulip Bunglows & Tulip Citadel, Manekbaug, Ambavadi, Ahmedabad has been rated 4.2  \n\n4:Brick Kitchen - Five Petals in At Five Petals Hotel & Banquets, Near Chanakyapuri Bridge, Ghatlodia, Ahmedabad has been rated 4.2  \n\n5:Yanki Sizzlers in 4, Ground Floor, Binori Ambit, Next to Renault Showroom, Thaltej Circle, Thaltej, Ahmedabad has been rated 4.1  \n\n"
+  - action: utter_ask_send_email
+  - intent: deny
+  - action: utter_aknowledge_denial
+  - action: utter_ask_further_search_of_restaurants
+  - intent: deny
+  - action: utter_aknowledge_denial
+  - action: utter_goodbye
+  - action: action_restarted
+
+- story: interactive_story_23
+  steps:
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+    - location: surat
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - location: surat
+  - action: action_check_location_valid
+  - slot_was_set:
+    - location_validity: valid
+  - slot_was_set:
+    - location: surat
+  - action: action_check_cuisine_valid
+  - slot_was_set:
+    - cuisine_validity: valid
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_budget
+  - intent: ask_budget
+    entities:
+    - budget: '299'
+  - slot_was_set:
+    - budget: '299'
+  - action: action_search_restaurants
+  - slot_was_set:
+    - emailbody: Sorry, No results found for your criteria
+  - action: utter_ask_further_search_of_restaurants
+  - intent: deny
+  - action: utter_aknowledge_denial
+  - action: utter_goodbye
+
+- story: interactive_story_24
+  steps:
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bhopal
+  - slot_was_set:
+    - location: bhopal
+  - action: action_check_location_valid
+  - slot_was_set:
+    - location_validity: valid
+  - slot_was_set:
+    - location: bhopal
+  - action: action_check_cuisine_valid
+  - slot_was_set:
+    - cuisine_validity: valid
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_budget
+  - intent: ask_budget
+    entities:
+    - budget: '299'
+  - slot_was_set:
+    - budget: '299'
+  - action: action_search_restaurants
+  - slot_was_set:
+    - emailbody: "1:Bake N Shake in B-1, GM Tower,  Stop No. 10, Arera Colony, Bhopal has been rated 4.4 \n\n2:Black N White Cafe in G-1, Raksha Tower, Eden Garden, Arera Colony, Bhopal has been rated 3.3 \n\nSorry! less than 5 restaurants found for bhopal location and chinese Cusine."
+  - action: utter_ask_send_email
+  - intent: deny
+  - action: utter_aknowledge_denial
+  - action: utter_goodbye
+  - action: action_restarted
+
+- story: interactive_story_26
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_check_location_valid
+  - slot_was_set:
+    - location_validity: valid
+  - slot_was_set:
+    - location: bangalore
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: thai
+  - slot_was_set:
+    - cuisine: thai
+  - action: action_check_cuisine_valid
+  - slot_was_set:
+    - cuisine_validity: invalid
+  - slot_was_set:
+    - cuisine: None
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: Mexican
+  - slot_was_set:
+    - cuisine: Mexican
+  - action: action_check_cuisine_valid
+  - slot_was_set:
+    - cuisine_validity: valid
+  - slot_was_set:
+    - cuisine: Mexican
+  - action: utter_ask_budget
+  - intent: ask_budget
+    entities:
+    - budget: '701'
+  - slot_was_set:
+    - budget: '701'
+  - action: action_search_restaurants
+  - slot_was_set:
+    - emailbody: Sorry, No results found for your criteria
+  - action: utter_ask_further_search_of_restaurants
+  - intent: deny
+  - action: utter_aknowledge_denial
+  - action: utter_goodbye
+  - action: action_restarted
+
+- story: interactive_story_27
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_check_location_valid
+  - slot_was_set:
+    - location_validity: valid
+  - slot_was_set:
+    - location: bangalore
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: thai
+  - slot_was_set:
+    - cuisine: thai
+  - action: action_check_cuisine_valid
+  - slot_was_set:
+    - cuisine_validity: invalid
+  - slot_was_set:
+    - cuisine: None
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: Mexican
+  - slot_was_set:
+    - cuisine: Mexican
+  - action: action_check_cuisine_valid
+  - slot_was_set:
+    - cuisine_validity: valid
+  - slot_was_set:
+    - cuisine: Mexican
+  - action: utter_ask_budget
+  - intent: ask_budget
+    entities:
+    - budget: '701'
+  - slot_was_set:
+    - budget: '701'
+  - action: action_search_restaurants
+  - slot_was_set:
+    - emailbody: Sorry, No results found for your criteria
+  - action: utter_ask_further_search_of_restaurants
+  - intent: deny
+  - action: utter_aknowledge_denial
+  - action: utter_goodbye
+  - action: action_restarted
+
+- story: interactive_story_28
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_check_location_valid
+  - slot_was_set:
+    - location_validity: valid
+  - slot_was_set:
+    - location: bangalore
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - action: action_check_cuisine_valid
+  - slot_was_set:
+    - cuisine_validity: valid
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_budget
+  - intent: ask_budget
+    entities:
+    - budget: '701'
+  - slot_was_set:
+    - budget: '701'
+  - action: action_search_restaurants
+  - slot_was_set:
+    - emailbody: "1:ECHOES Koramangala in 44, 4th B Cross, Koramangala 5th Block, Bangalore has been rated 4.7  \n\n2:Biergarten in 2, Doddanekkundi, Whitefield Road, Mahadevpura, Whitefield, Bangalore has been rated 4.5  \n\n3:The Fatty Bao - Asian Gastro Bar in 610, 3rd Floor, 12th Main, Off 80 Feet Road, Indiranagar, Bangalore has been rated 4.5  \n\n4:Biergarten in 4th B Cross, Koramangala 5th Block, Bangalore has been rated 4.4  \n\n5:1131 Bar + Kitchen in 100 Feet Road, HAL 2nd Stage, Indiranagar, Bangalore has been rated 4.2  \n\n"
+  - action: utter_ask_send_email
+  - intent: affirm
+  - action: utter_ask_for_email_address
+  - intent: ask_for_email_address
+    entities:
+    - email: njalgaonkar@gmail.com
+  - slot_was_set:
+    - email: njalgaonkar@gmail.com
+  - action: action_check_email_valid
+  - slot_was_set:
+    - email_validity: valid
+    - email: njalgaonkar@gmail.com
+  - action: action_send_mail
+  - action: utter_ask_further_search_of_restaurants
+  - intent: deny
+  - action: utter_aknowledge_denial
+  - action: utter_goodbye
+  - action: action_restarted
+
+- story: interactive_story_29
+  steps:
+  - intent: restaurant_search
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_check_location_valid
+  - slot_was_set:
+    - location_validity: valid
+  - slot_was_set:
+    - location: bangalore
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: thai
+  - slot_was_set:
+    - cuisine: thai
+  - action: action_check_cuisine_valid
+  - slot_was_set:
+    - cuisine_validity: invalid
+  - slot_was_set:
+    - cuisine: None
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: Italian
+  - slot_was_set:
+    - cuisine: Italian
+  - action: action_check_cuisine_valid
+  - slot_was_set:
+    - cuisine_validity: valid
+  - slot_was_set:
+    - cuisine: Italian
+  - action: utter_ask_budget
+  - intent: ask_budget
+    entities:
+    - budget: '701'
+  - slot_was_set:
+    - budget: '701'
+  - action: action_search_restaurants
+  - slot_was_set:
+    - emailbody: "1:ECHOES Koramangala in 44, 4th B Cross, Koramangala 5th Block, Bangalore has been rated 4.7  \n\n2:Windmills Craftworks in 331, EPIP Area, Road 5B, Near KTPO, Whitefield, Bangalore has been rated 4.7  \n\n3:Olive Bar And Kitchen in 16, Wood Street, Ashok Nagar, Richmond Road, Bangalore has been rated 4.6  \n\n4:Toit in 298, 100 Feet Road, Namma Metro Pillar 62, Indiranagar, Bangalore has been rated 4.6  \n\n5:Big Brewsky in Behind MK Retail, Before WIPRO Corporate Office, Sarjapur Road, Bangalore has been rated 4.5  \n\n"
+  - action: utter_ask_send_email
+  - intent: affirm
+  - action: utter_ask_for_email_address
+  - intent: ask_for_email_address
+    entities:
+    - email: njalgaonkar@gmail.com
+  - slot_was_set:
+    - email: njalgaonkar@gmail.com
+  - action: action_check_email_valid
+  - slot_was_set:
+    - email_validity: valid
+    - email: njalgaonkar@gmail.com
+  - action: action_send_mail
+  - action: utter_ask_further_search_of_restaurants
+  - intent: deny
+  - action: utter_aknowledge_denial
+  - action: utter_goodbye
+  - action: action_restarted
+
+- story: interactive_story_30
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: New Delhi
+  - slot_was_set:
+    - location: New Delhi
+  - action: action_check_location_valid
+  - slot_was_set:
+    - location_validity: valid
+  - slot_was_set:
+    - location: New Delhi
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - action: action_check_cuisine_valid
+  - slot_was_set:
+    - cuisine_validity: valid
+  - action: utter_ask_budget
+  - intent: ask_budget
+    entities:
+    - budget: '701'
+  - slot_was_set:
+    - budget: '701'
+  - action: action_search_restaurants
+  - slot_was_set:
+    - emailbody: "1:Pa Pa Ya in Dome, Level 4, Select Citywalk, A-3, District Centre, Saket, New Delhi has been rated 4.7  \n\n2:Spezia Bistro in 2525, 1st Floor, Hudson Lane, Delhi University-GTB Nagar, New Delhi has been rated 4.6  \n\n3:Qubitos - The Terrace Cafe in C-7, Vishal Enclave, Opposite Metro Pillar 417, Rajouri Garden, New Delhi has been rated 4.5  \n\n4:Ghar Bistro Cafe in J-198, 2nd Floor, Rajouri Garden, New Delhi has been rated 4.4  \n\n5:Karate Kitchen in Greater Kailash (GK) 1, New Delhi has been rated 4.4  \n\n"
+  - action: utter_ask_send_email
+  - intent: affirm
+  - action: utter_ask_for_email_address
+  - intent: ask_for_email_address
+    entities:
+    - email: njalgaonkar@gmail.com
+  - slot_was_set:
+    - email: njalgaonkar@gmail.com
+  - action: action_check_email_valid
+  - slot_was_set:
+    - email_validity: valid
+    - email: njalgaonkar@gmail.com
+  - action: action_send_mail
+  - action: utter_ask_further_search_of_restaurants
+  - intent: deny
+  - action: utter_aknowledge_denial
+  - action: utter_goodbye
+  - action: action_restarted
+
+- story: interactive_story_31
+  steps:
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+    - location: mumbai
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - location: mumbai
+  - action: action_check_location_valid
+  - slot_was_set:
+    - location_validity: valid
+  - slot_was_set:
+    - location: mumbai
+  - action: action_check_cuisine_valid
+  - slot_was_set:
+    - cuisine_validity: valid
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_budget
+  - intent: ask_budget
+    entities:
+    - budget: '701'
+  - slot_was_set:
+    - budget: '701'
+  - action: action_search_restaurants
+  - slot_was_set:
+    - emailbody: "1:The Fusion Kitchen in Shop 1, Opposite Veda Building, Near Bhavdevi Garage, Holy Cross Road, IC colony, Borivali West, Mumbai has been rated 4.7  \n\n2:Yauatcha in Raheja Tower, Bandra Kurla Complex, Mumbai has been rated 4.6  \n\n3:Butterfly High in Unit 4, Ground Floor, Jet Airways, Godrej G Block, Near MCA, Bandra Kurla Complex, Mumbai has been rated 4.3  \n\n4:BKC  DIVE in Ground Floor, Pinnacle Corporate Park, Opposite MTNL Office, Bandra Kurla Complex, Mumbai has been rated 4.2  \n\n5:Bayview Cafe in Hotel Harbour View, Kerawala Chamber, Opposite Radio Club, 25, J P Ramchandani Marg, Colaba, Mumbai has been rated 4.2  \n\n"
+  - action: utter_ask_send_email
+  - intent: ask_for_email_address
+    entities:
+    - email: manishvidya@gmail.com
+  - slot_was_set:
+    - email: manishvidya@gmail.com
+  - action: action_check_email_valid
+  - slot_was_set:
+    - email_validity: valid
+    - email: manishvidya@gmail.com
+  - action: action_send_mail
+  - action: utter_ask_further_search_of_restaurants
+  - intent: affirm
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: Bangalore
+  - slot_was_set:
+    - location: Bangalore
+  - action: action_check_location_valid
+  - slot_was_set:
+    - location_validity: valid
+  - slot_was_set:
+    - location: Bangalore
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: South Indian
+  - slot_was_set:
+    - cuisine: South Indian
+  - action: action_check_cuisine_valid
+  - slot_was_set:
+    - cuisine_validity: valid
+  - slot_was_set:
+    - cuisine: South Indian
+  - action: utter_ask_budget
+  - intent: ask_budget
+    entities:
+    - budget: '701'
+  - slot_was_set:
+    - budget: '701'
+  - action: action_search_restaurants
+  - slot_was_set:
+    - emailbody: "1:Big Brewsky in Behind MK Retail, Before WIPRO Corporate Office, Sarjapur Road, Bangalore has been rated 4.5  \n\n2:Brahma Brews in Opposite Brigade Palm Springs, 24th Main, 7th Phase, JP Nagar, Bangalore has been rated 4.3  \n\n3:Byg Brewski Brewing Company in 22/123, Byrathi Village, Bidarahalli Hobli, Hennur, Bangalore has been rated 4.3  \n\nSorry! less than 5 restaurants found for Bangalore location and South Indian Cusine."
+  - action: utter_ask_send_email
+  - intent: affirm
+  - action: utter_ask_for_email_address
+  - intent: ask_for_email_address
+    entities:
+    - email: manishvidya@gmail.com
+  - slot_was_set:
+    - email: manishvidya@gmail.com
+  - action: action_check_email_valid
+  - slot_was_set:
+    - email_validity: valid
+    - email: manishvidya@gmail.com
+  - action: action_send_mail
+  - action: utter_ask_further_search_of_restaurants
+  - intent: deny
+  - action: utter_aknowledge_denial
+  - action: utter_goodbye
+  - action: action_restarted
+
+- story: interactive_story_32
+  steps:
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+    - location: Bhopal
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - location: Bhopal
+  - action: action_check_location_valid
+  - slot_was_set:
+    - location_validity: valid
+  - slot_was_set:
+    - location: Bhopal
+  - action: action_check_cuisine_valid
+  - slot_was_set:
+    - cuisine_validity: valid
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_budget
+  - intent: ask_budget
+    entities:
+    - budget: '700'
+  - slot_was_set:
+    - budget: '700'
+  - action: action_search_restaurants
+  - slot_was_set:
+    - emailbody: "1:Manohar Dairy And Restaurant in 32 A & B, Ram Gopal Maheshwari Marg, Near Jyoti Talkies, Zone 1, Maharana Pratap Nagar, Bhopal has been rated 4.6 \n\n2:Manohar Dairy And Restaurant in 6, Hamidia Road, Opposite Alpana Cineplex, Peer Gate Area, Bhopal has been rated 4.5 \n\n3:Hong Kong in 131/4, Zone 2, Near Pragati Petrol Pump, Maharana Pratap Nagar, Bhopal has been rated 4.2 \n\n4:Sagar Gaire Fast Food - Idgah Hills in Shop 1, 2, 3, Meenakshi Complex, Aali Manzil Road, Niyamatpura, Idgah Hills, Bhopal has been rated 4.2 \n\n5:Lazeez Hakeem in 187 A, Zone 1, Maharana Pratap Nagar, Bhopal has been rated 4.1 \n\n"
+  - action: utter_ask_send_email
+  - intent: affirm
+  - action: utter_ask_for_email_address
+  - intent: ask_for_email_address
+    entities:
+    - email: dymmy123.com
+  - slot_was_set:
+    - email: dymmy123.com
+  - action: action_check_email_valid
+  - slot_was_set:
+    - email_validity: invalid
+  - slot_was_set:
+    - email: None
+  - intent: ask_for_email_address
+    entities:
+    - email: njalgaonkar@gmail.com
+  - slot_was_set:
+    - email: njalgaonkar@gmail.com
+  - action: action_check_email_valid
+  - slot_was_set:
+    - email_validity: valid
+  - slot_was_set:
+    - email: njalgaonkar@gmail.com
+  - action: action_send_mail
+  - action: utter_ask_further_search_of_restaurants
+  - intent: deny
+  - action: utter_aknowledge_denial
+  - action: utter_goodbye
+  - action: action_restarted
+
+- story: interactive_story_33
+  steps:
+  - intent: restaurant_search
+    entities:
+    - cuisine: north indian
+    - location: chandigarh
+  - slot_was_set:
+    - cuisine: north indian
+  - slot_was_set:
+    - location: chandigarh
+  - action: action_check_location_valid
+  - slot_was_set:
+    - location_validity: valid
+  - slot_was_set:
+    - location: mumbai
+  - action: action_check_cuisine_valid
+  - slot_was_set:
+    - cuisine_validity: valid
+  - slot_was_set:
+    - cuisine: north indian
+  - action: utter_ask_budget
+  - intent: ask_budget
+    entities:
+    - budget: '701'
+  - slot_was_set:
+    - budget: '701'
+  - action: action_search_restaurants
+  - slot_was_set:
+    - emailbody: "Sorry Manually created...\n\n"
+  - action: utter_ask_send_email
+  - intent: ask_for_email_address
+    entities:
+    - email: manishvidya@gmail.com
+  - slot_was_set:
+    - email: manishvidya@gmail.com
+  - action: action_check_email_valid
+  - slot_was_set:
+    - email_validity: valid
+    - email: manishvidya@gmail.com
+  - action: action_send_mail
+  - action: utter_ask_further_search_of_restaurants
+  - intent: affirm
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - cuisine: South indian
+    - location: Bangalore
+  - slot_was_set:
+    - cuisine: South indian
+    - location: Bangalore
+  - action: action_check_location_valid
+  - slot_was_set:
+    - location_validity: valid
+  - slot_was_set:
+    - location: Bangalore
+  - action: action_check_cuisine_valid
+  - slot_was_set:
+    - cuisine_validity: valid
+  - slot_was_set:
+    - cuisine: Sorth indian    
+  - action: utter_ask_budget
+  - intent: ask_budget
+    entities:
+    - budget: '701'
+  - slot_was_set:
+    - budget: '701'
+  - action: action_search_restaurants
+  - slot_was_set:
+    - emailbody: "Story manually created"
+  - action: utter_ask_send_email
+  - intent: affirm
+  - action: utter_ask_for_email_address
+  - intent: ask_for_email_address
+    entities:
+    - email: manishvidya@gmail.com
+  - slot_was_set:
+    - email: manishvidya@gmail.com
+  - action: action_check_email_valid
+  - slot_was_set:
+    - email_validity: valid
+    - email: manishvidya@gmail.com
+  - action: action_send_mail
+  - action: utter_ask_further_search_of_restaurants
+  - intent: deny
+  - action: utter_aknowledge_denial
+  - action: utter_goodbye
+  - action: action_restarted
