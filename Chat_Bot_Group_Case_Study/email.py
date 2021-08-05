@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sat May  8 22:33:45 2021
-
-@author: nilesh_jalgaonkar
 """
 
 import smtplib
@@ -17,9 +15,9 @@ The mail is sent using Python SMTP library.
 Thank You
 '''
 #The mail addresses and password
-sender_address = 'chatbot2021.upgrad@gmail.com'
+sender_address = 'chatbot2021@gmail.com'
 sender_pass = 'Chatbot2021*'
-receiver_address = 'njalgaonkar@gmail.com'
+receiver_address = 'name@gmail.com'
 
 #Setup the MIME
 message = MIMEMultipart()
